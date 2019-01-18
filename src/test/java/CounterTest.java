@@ -1,4 +1,5 @@
 import com.example.Counter;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -15,6 +16,13 @@ public class CounterTest {
     @Test
     public void test() {
         int sum = new Counter().sum(10);
-        assertEquals(45, sum);
+        assertEquals(55, sum);
+    }
+
+    @Test
+    @Ignore
+    public void testFactorial() {
+        int factorial = new Counter().factorial(10);
+        assertEquals(3628800, factorial);
     }
 }

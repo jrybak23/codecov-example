@@ -8,6 +8,10 @@ import java.util.stream.IntStream;
  */
 public class Counter {
     public int sum(int i) {
-        return IntStream.range(1, i).sum();
+        return IntStream.range(1, i + 1).sum();
+    }
+
+    public int factorial(int i) {
+        return IntStream.range(1, i + 1).reduce((a, b) -> a * b).orElse(0);
     }
 }
